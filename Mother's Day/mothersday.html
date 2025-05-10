@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>From My Heart to Yours, Mom 💝</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: #ffe6f0;
+      text-align: center;
+      color: #4b2c2c;
+      overflow-x: hidden;
+    }
+
+    .header {
+      padding: 40px 20px 20px;
+    }
+
+    .header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    .heart-bg {
+      background: url('https://i.imgur.com/1YcKL8T.gif') no-repeat center center;
+      background-size: 200px;
+      height: 200px;
+      margin: 0 auto 30px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    .photo-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff85a2;
+      box-shadow: 0 0 15px #ffb6c1;
+      margin: 0 auto 20px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .photo-circle:hover {
+      transform: scale(1.05);
+    }
+
+    .message-box {
+      max-width: 600px;
+      background: #fff0f5;
+      border: 2px dashed #ff69b4;
+      border-radius: 20px;
+      padding: 25px;
+      margin: 20px auto;
+      display: none;
+      font-size: 1.1em;
+    }
+
+    .gallery-section {
+      margin-top: 80px;
+    }
+
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #ffc0cb;
+      box-shadow: 0 0 10px #ff99aa;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .footer {
+      padding: 20px;
+      font-size: 0.9em;
+      color: #8b5e5e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="heart-bg"></div>
+    <h1>You Are the Heart of My World 💖</h1>
+    <p>Click your photo to open a message just for you.</p>
+    <img src="mummy selfie.jpg" class="photo-circle" onclick="toggleMessage()" alt="Mom">
+  </div>
+
+  <div class="message-box" id="messageBox">
+    <p>Dear Mom,</p>
+    <p>You are my heart, my guide, and my constant. Every smile you gave me, every hug you shared — they shaped my life in the most beautiful way. ❤️</p>
+    <p>Thank you for your strength, your love, and your endless belief in me. I love you more than words can ever say.</p>
+    <p>Forever your child, with love 💫</p>
+  </div>
+
+  <div class="gallery-section">
+    <h2 style="color:#d6336c;">💌 A Gallery of Moments with You 💌</h2>
+    <div class="gallery">
+      <img src="all of us toget.jpg" alt="Mom Pic 1">
+      <img src="me and mummy.jpg" alt="Mom Pic 2">
+      <img src="mummy and simran.jpg" alt="Mom Pic 3">
+      <img src="mummy and me 2.jpg" alt="Mom Pic 4">
+    </div>
+  </div>
+
+  <div class="footer">
+    Made with love by your favorite child 💗
+  </div>
+
+  <script>
+    function toggleMessage() {
+      const box = document.getElementById('messageBox');
+      box.style.display = box.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
